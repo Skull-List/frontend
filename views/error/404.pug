@@ -1,0 +1,10 @@
+extends ../layouts/default
+
+block head
+  link(rel="stylesheet", href="/css/pages/error.css")
+
+block body
+  .error
+    h1 #{error.status}
+    h2 #{message}
+    a.btn.btn-primary(href="/") Voltar

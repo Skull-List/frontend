@@ -1,0 +1,52 @@
+doctype html
+html(lang="pt-BR")
+  head
+    title=(title ? title + " | " : "") + "Skull List"
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name="theme-color" content="#00afff")
+    meta(name="description" content=description || "Skull List Description")
+    meta(name="keywords" content=keywords || "keywords")
+    meta(name="author" content="KuryKat")
+    meta(property="og:type" content="website")
+    meta(property="og:description" content=description || "Skull List Description")
+    meta(property="og:keywords" content=keywords || "keywords")
+    meta(property="og:site_name" content="Skull List")
+    meta(property="og:url" content="<url>")
+    meta(property="og:image" content="/img/logo.png")
+    link(rel="icon" href="/img/favicon.ico" type="image/x-icon" sizes="128x128")
+
+    //- CSS LIBS
+    link(rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/lib/font-awesome/css/all.min.css")
+
+    //- MAIN CSS
+    link(rel="stylesheet" href="/css/style.css")
+
+    //- JS LIBS
+    script(src="/lib/bootstrap/js/bootstrap.bundle.min.js")
+    script(src="/lib/jquery.min.js")
+    script(src="/lib/font-awesome/js/all.min.js" defer)
+
+    //- MAIN JS
+    script(src="/js/index.js")
+    block head
+  body
+    nav.navbar.navbar-expand-lg.fixed-top
+      .container-fluid
+        .navbar-brand
+          img(src="/img/logo.png", alt="Skull List Logo")
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbar-menu' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+          span.icon 
+            i.fas.fa-bars
+        #navbar-menu.collapse.navbar-collapse
+          .navbar-nav
+              a.nav-link.navbar-on(href="/") Início
+              a.nav-link.navbar-on(href="/bots") Bots
+    .container
+      block body
+    footer
+      .copyright
+        |  © 2021 - Copyright Skull List - Todos os Direitos Reservados
+      .dev
+        a(href="/dev") by KuryKat

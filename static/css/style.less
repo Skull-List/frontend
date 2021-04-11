@@ -1,0 +1,104 @@
+@import "../../node_modules/rfs/less.less";
+
+/* GLOBAL CSS
+=========================*/
+@default-color: #01afff;
+@dark-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+@light-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+@font-face {
+  font-family: SkullList;
+  src: url("/font/HermeneusOne-Regular.ttf");
+}
+
+body {
+  font-family: SkullList;
+  color: @default-color;
+  text-shadow: @dark-shadow;
+  font-size: 1em;
+  margin-top: 80px;
+  background-color: #00293c;
+
+  @media screen and (max-width: 991px) {
+    margin-top: initial;
+    margin-bottom: 80px;
+  }
+
+  .btn-primary {
+    text-shadow: initial;
+    background-color: #008ccd;
+    border-color: #008ccd;
+
+    &:visited,
+    &:link {
+      background-color: #008ccd;
+      border-color: #008ccd;
+    }
+
+    &:hover,
+    &:active {
+      background-color: #34bfffc7;
+      border-color: #34bfffc7;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: whitesmoke;
+    }
+  }
+
+  nav.navbar {
+    text-shadow: initial;
+    .font-size('2rem');
+    background-color: #007bb4;
+
+    &.fixed-top {
+      @media screen and (max-width: 991px) {
+        top: initial;
+        bottom: 0 !important;
+      }
+    }
+
+    .navbar-brand {
+      img {
+        max-width: 56px;
+        max-height: 56px;
+      }
+    }
+
+    .navbar-nav {
+      .nav-link {
+        border-radius: 20px;
+
+        &:hover {
+          background-color: #009ee7;
+        }
+      }
+    }
+  }
+
+  footer {
+    text-shadow: initial;
+    color: black;
+    .font-size('0.8rem');
+    font-weight: bold;
+    background-color: #007bb4;
+    box-shadow: 0 -5px 10px #008cce;
+    margin-top: 30px;
+    padding: 25px;
+    text-align: center;
+
+    a {
+      color: black;
+
+      &:hover {
+        color: gray;
+        text-shadow: @light-shadow;
+      }
+    }
+  }
+}
