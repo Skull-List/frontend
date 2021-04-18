@@ -11,8 +11,7 @@
         "email": "contactkurykat@gmail.com",
         "url": "https://github.com/kurykat"
     },
-    "license": "none",
-    "private": true,
+    "license": "GPL-3.0",
     "dependencies": {
         "debug": "^4.3.1",
         "express": "^4.17.1",
